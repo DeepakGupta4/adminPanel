@@ -13,7 +13,7 @@ const AdminJobs = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/jobs");
+        const response = await axios.get("https://sarkar-backend-cks3.onrender.com/api/jobs");
         setJobs(response.data);
       } catch (error) {
         setError("Failed to load jobs. Please try again.");
@@ -30,7 +30,7 @@ const AdminJobs = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:4000/api/jobs/delete/${id}`);
+      await axios.delete(`https://sarkar-backend-cks3.onrender.com/api/jobs/delete/${id}`);
       setJobs(jobs.filter((job) => job._id !== id));
     } catch (error) {
       console.error("Error deleting job:", error);
@@ -47,7 +47,7 @@ const AdminJobs = () => {
     if (!editingJob) return;
     try {
       const response = await axios.put(
-        `http://localhost:4000/api/jobs/update/${editingJob._id}`,
+        `https://sarkar-backend-cks3.onrender.com/api/jobs/update/${editingJob._id}`,
         editingJob
       );
       console.log(response.data.message);

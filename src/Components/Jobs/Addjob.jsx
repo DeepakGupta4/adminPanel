@@ -26,7 +26,7 @@ const AddJob = () => {
     const newJob = { jobTitle, company, location, salary, description, documents, price, applicationLink };
 
     try {
-      const response = await axios.post("http://localhost:4000/api/jobs/add", newJob);
+      const response = await axios.post("https://sarkar-backend-cks3.onrender.com/api/jobs/add", newJob);
 
       if (response.status === 201) {
         alert("Job added successfully!");

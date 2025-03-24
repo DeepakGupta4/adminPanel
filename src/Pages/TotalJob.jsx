@@ -8,7 +8,7 @@ const TotalJobs = () => {
   const navigate = useNavigate(); // Initialize navigate function
 
   useEffect(() => {
-    axios.get("http://localhost:4000/api/jobs/")
+    axios.get("https://sarkar-backend-cks3.onrender.com/api/jobs/")
       .then((response) => setJobs(response.data))
       .catch((error) => console.error("Error fetching jobs:", error));
   }, []);

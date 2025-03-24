@@ -11,7 +11,7 @@ const AdminServices = () => {
   // Fetch services
   const fetchServices = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/api/services");
+      const response = await axios.get("https://sarkar-backend-cks3.onrender.com/api/services");
       setServices(response.data);
     } catch (error) {
       console.error("Error fetching services:", error);
@@ -25,7 +25,7 @@ const AdminServices = () => {
   // Add Service
   const handleAddService = async () => {
     try {
-      await axios.post("http://localhost:4000/api/services/add", formData);
+      await axios.post("https://sarkar-backend-cks3.onrender.com/api/services/add", formData);
       setFormData({ name: "", price: "", description: "", icon: "🛠️" });
       fetchServices();
     } catch (error) {
@@ -38,7 +38,7 @@ const AdminServices = () => {
     if (!window.confirm("Are you sure you want to delete this service?")) return;
 
     try {
-      await axios.delete(`http://localhost:4000/api/services/delete/${id}`);
+      await axios.delete(`https://sarkar-backend-cks3.onrender.com/api/services/delete/${id}`);
       fetchServices();
     } catch (error) {
       console.error("Error deleting service:", error);
@@ -55,7 +55,7 @@ const AdminServices = () => {
     if (!editingService) return;
     
     try {
-      await axios.put(`http://localhost:4000/api/services/update/${editingService._id}`, editingService);
+      await axios.put(`https://sarkar-backend-cks3.onrender.com/api/services/update/${editingService._id}`, editingService);
       setEditingService(null); // Exit Edit Mode
       fetchServices();
     } catch (error) {

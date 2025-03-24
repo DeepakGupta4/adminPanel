@@ -15,7 +15,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/all-jobs/status");
+        const response = await axios.get("https://sarkar-backend-cks3.onrender.com/api/all-jobs/status");
         setStats(response.data);
       } catch (error) {
         console.error("Error fetching dashboard status:", error);
