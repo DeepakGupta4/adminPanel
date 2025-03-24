@@ -11,13 +11,13 @@ import ProtectedRoute from "./Middleware/ProtectionRoute";
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        {/* Default Redirect: Root "/" goes to "/admin/login" */}
-        <Route path="/" element={<Navigate to="/admin/login" replace />} />
+    <Router basename="/admin">  {/* ✅ Fix: basename added */}
+    <Routes>
+      {/* Default Redirect: Root "/" goes to "/admin/login" */}
+      <Route path="/" element={<Navigate to="/login" replace />} />
 
-        {/* Public Routes */}
-        <Route path="/admin/login" element={<Login />} />
+      {/* Public Routes */}
+      <Route path="/login" element={<Login />} />
 
         {/* Protected Routes */}
         <Route
