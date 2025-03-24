@@ -11,7 +11,7 @@ import ProtectedRoute from "./Middleware/ProtectionRoute";
 
 const App = () => {
   return (
-    <Router basename="/admin">  {/* ✅ Fix: basename added */}
+    <Router basename="/admin">
     <Routes>
       {/* Default Redirect: Root "/" goes to "/admin/login" */}
       <Route path="/" element={<Navigate to="/login" replace />} />
