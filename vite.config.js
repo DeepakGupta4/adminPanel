@@ -5,6 +5,6 @@ export default defineConfig({
   plugins: [react()],
   base: "/admin/",  // 👈 Ensure this is set if your app starts from /admin
   server: {
-    port: 4000, // Ya jo bhi port use kar rahe ho
+    port: 5174, // Ya jo bhi port use kar rahe ho
   },
 });
