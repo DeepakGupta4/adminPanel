@@ -37,11 +37,11 @@ const Dashboard = () => {
       <aside className="sidebar">
         <h2 className="logo">Admin Panel</h2>
         <ul>
-          <li><Link to="/">🏠 Dashboard</Link></li>
+          <li><Link to="/admin/dashboard">🏠 Dashboard</Link></li>
           <li><Link to="/admin/jobs">➕ Total Job</Link></li>
           <li><Link to="/admin/services">🛠 Services</Link></li>
-          <li><Link to="/admin/service-request">📩 Service Requests</Link></li>
-          <li><Link to="/admin/job-applications">📄 Job Applications</Link></li>
+          {/* <li><Link to="/admin/service-request">📩 Service Requests</Link></li>
+          <li><Link to="/admin/job-applications">📄 Job Applications</Link></li> */}
           <li><button onClick={handleLogout} className="logout-btn">🚪 Logout</button></li>
         </ul>
       </aside>
