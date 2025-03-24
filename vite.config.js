@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/admin/", // Set correct base URL for Vercel
+  base: "/admin/",  // 👈 This tells Vite that the base path is /admin
 });
